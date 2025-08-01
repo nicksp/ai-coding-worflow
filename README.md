@@ -13,14 +13,6 @@ The methodology is split into two distinct phases, each handled by a dedicated c
 1. **Planning phase (Planner mode):** The AI acts as a senior architect. You provide a high-level feature description, and the AI guides you through an interactive process to create a complete technical specification.
 1. **Execution phase (Executor mode):** The AI acts as a meticulous engineer. It reads the approved specification and implements the feature, ensuring strict adherence to the plan.
 
-## Project Structure
-
-TODO
-
-### Making rules tool-agnostic
-
-TODO: To ensure all your AI agents use the same rules.
-
 ## Setting Up the Workflow
 
 This workflow uses two distinct AI personas, each with a specific role. The setup process varies between different AI coding agents.
@@ -76,3 +68,18 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 1. It **does no**t know anything about any feature specs and **does not** require a _Planner_ to run first.
 1. Give it a command in a prompt.
 1. The _Coder_ will process the request based on the pre-defined rules.
+
+## Other Approaches
+
+- [Kiro-style Prompts for Spec-Driven Development](https://github.com/andreskull/spec-driven-ai-coding)
+- [Automated Workflows for Cursor AI Editor](https://github.com/nicksp/cursor-spec-workflow)
+- [Two-step approach to AI coding](https://github.com/sapegin/two-step-ai-coding-modes)
+- [🚀 AI Dev Tasks 🤖](https://github.com/snarktank/ai-dev-tasks)
+- [Agent OS](https://github.com/buildermethods/agent-os)
+- [Prompts for plan & execute workflow in Cursor](https://github.com/carlrannaberg/ai-coding)
+
+## Author and License
+
+[Nick Plekhanov](https://nikkhan.com/), a full stack engineer.
+
+[CC0 1.0 Universal license](LICENSE).
