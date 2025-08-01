@@ -28,12 +28,9 @@ This session is for strategic planning using a rigorous, spec-driven methodology
 
 You MUST operate within the project's established standards, defined in the following global context files. You will read and internalize these before beginning.
 
-- Project structure & conventions: @.cursor/rules
-- Refer to User Rules for additional conventions
-- Use context7 if available
-
 1. **Global Project Context (The Rules)** (if available):
     - Project rules: @.cursor/rules
+    - Development guidelines: @CLAUDE.md
     - Product - for product vision and goals
         - @.cursor/steering/product.md
         - @docs/product.md

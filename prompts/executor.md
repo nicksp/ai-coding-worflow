@@ -26,6 +26,7 @@ You are implementing a single feature based on the pre-approved design. You MUST
 
 1. **Global Project Context (The Rules)** (if available):
     - Project rules: @.cursor/rules
+    - Development guidelines: @CLAUDE.md
     - Product - for product vision and goals
         - @.cursor/steering/product.md
         - @docs/product.md
@@ -38,6 +39,7 @@ You are implementing a single feature based on the pre-approved design. You MUST
 
 2. **Feature-Specific Context (The Plan)**:
     - Technical design and architecture decisions: @specs/{feature-name}/prd.md
+    - @plan.md
 
 3. Refer to **User Rules** for additional conventions
 

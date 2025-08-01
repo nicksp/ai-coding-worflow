@@ -26,6 +26,7 @@ You are implementing a single code change based on the user prompt. You MUST loa
 
 1. **Global Project Context (The Rules)** (if available):
     - Project rules: @.cursor/rules
+    - Development guidelines: @CLAUDE.md
     - Product - for product vision and goals
         - @.cursor/steering/product.md
         - @docs/product.md
