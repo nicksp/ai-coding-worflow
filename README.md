@@ -72,7 +72,6 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 ## Other Approaches
 
 - [Kiro-style Prompts for Spec-Driven Development](https://github.com/andreskull/spec-driven-ai-coding)
-- [Automated Workflows for Cursor AI Editor](https://github.com/nicksp/cursor-spec-workflow)
 - [Two-step approach to AI coding](https://github.com/sapegin/two-step-ai-coding-modes)
 - [🚀 AI Dev Tasks 🤖](https://github.com/snarktank/ai-dev-tasks)
 - [Agent OS](https://github.com/buildermethods/agent-os)
