@@ -19,37 +19,36 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 ### Cursor (custom modes)
 
-**1. Planner Mode (The Architect):**
+**1. Planner mode**
 
 - **Mode Name:** "Planner"
-- **Model:** Claude Sonnet 4 or Opus 4.1 (powerful models for complex planning)
+- **Model:** Gemini 2.5 Pro or Claude Opus 4 (powerful models for complex planning)
 - **Prompt:** Copy the entire content from `prompts/planner.md`
-- **Context:** ✅ Enable "Full folder context"
-- **Tools:** ✅ Enable "Search codebase", "Read file", "Edit & Reapply", "Run terminal" (to generate a feature PRD file)
-- **Tools:** ❌ Disable all tools (Planner should not make code changes)
-- **Automation:** ❌ Disable auto-apply, auto-run, auto-fix (manual review required)
+- **Context:** Enable "Full folder context"
+- **Tools:** Enable "Search codebase", "Read file", "Edit & Reapply" (to generate a feature PRD file)
+- **Automation:** Disable auto-apply, auto-run, auto-fix (manual review required)
 
-**2. Executor Mode (The Engineer)**
+**2. Executor mode**
 
 - **Mode Name:** "Executor"
-- **Model:** Claude 4 Sonnet or Gemini 2.5 Flash or Pro (fast, capable models)
+- **Model:** Claude Sonnet 4 or Gemini 2.5 Flash (fast, capable models)
 - **Prompt:** Copy the entire content from `prompts/executor.md`
-- **Context:** ✅ Enable "Full folder context"
-- **Tools:** ✅ Enable all tools (file editing, terminal, etc.)
-- **Automation:** ⚠️ Optional - Enable auto-apply edits, auto-run, and auto-fix errors for autonomous execution. Prefer manual review.
+- **Context:** Enable "Full folder context"
+- **Tools:** Enable all tools (file editing, terminal, etc.)
+- **Automation:** Optional - Enable auto-apply edits, auto-run, and auto-fix errors for autonomous execution. Prefer manual review.
 
 ### Kilo Code (modes)
 
-**1. Planner Mode (The Architect):**
+**1. Planner mode**
 
-- **API Configuration:** Claude Sonnet 4 or Opus 4.1 (powerful models for complex planning)
 - **Name:** "Planner 💬"
+- **API Configuration:** Gemini 2.5 Pro or Claude Opus 4 (powerful models for complex planning)
 - **Save Location:** "Global" (available in all workspaces)
-- **Role Definition:** Copy <persona> inner content from `prompts/planner.md`
-- **Short description (for humans):** "Plan and design step-by-step technical specification"
+- **Role Definition:** Copy `<persona>` tag content from `prompts/planner.md`
+- **Short description (for humans):** "Plan and design technical specification"
 - **When to Use (optional):** "Use this mode when you need to plan, design, or strategize before implementation. Perfect for breaking down complex problems, creating technical specifications, designing system architecture, or brainstorming solutions before coding."
-- **Available Tools:** ✅ Enable "Read Files", "Edit Files (Markdown files only)", "Use Browser"
-  - Use this mode's `group` configuration
+- **Available Tools:** Enable "Read Files", "Edit Files (Markdown files only)", "Use Browser"
+  - Use this mode's `group` configuration to limit to markdown files only:
 
     ```
     groups:
@@ -60,35 +59,30 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
       - browser
     ```
 
-- **Custom Instructions (optional):** Copy the entire content (except <persona> tag) from `prompts/planner.md`
+- **Custom Instructions (optional):** Copy the entire content except `<persona>` tag from `prompts/planner.md`
 
-**2. Executor Mode (The Engineer)**
+**2. Executor mode**
 
-- **API Configuration:** Claude 4 Sonnet or Gemini 2.5 Flash or Pro (fast, capable models)
 - **Name:** "Executor 🔨"
+- **API Configuration:** Claude Sonnet 4 or Gemini 2.5 Fast (fast, capable models)
 - **Save Location:** "Global" (available in all workspaces)
-- **Role Definition:** Copy <persona> inner content from `prompts/executor.md`
+- **Role Definition:** Copy `<persona>` tag content from `prompts/executor.md`
 - **Short description (for humans):** "Implement features based on pre-approved specification"
 - **When to Use (optional):** "Use this mode when you need to implement a feature whose spec you approved during the Planning mode. Ideal for implementing features, fixing bugs, creating new files, or making code improvements across any programming language or framework."
-- **Available Tools:** ✅ Enable "Read Files", "Edit Files", "Use Browser", "Run Commands", "Use MCP"
-- **Custom Instructions (optional):** Copy the entire content (except <persona> tag) from `prompts/executor.md`
+- **Available Tools:** Enable "Read Files", "Edit Files", "Use Browser", "Run Commands", "Use MCP"
+- **Custom Instructions (optional):** Copy the entire content except `<persona>` tag from `prompts/executor.md`
 
 [Check out how to set up custom modes in other AI assistant tools.](https://github.com/andreskull/spec-driven-ai-coding#setting-up-the-workflow-in-different-ai-tools)
 
 ## Workflow Usage
 
-### Planner persona usage
-
-1. Switch to _Planner_ persona in your chosen AI tool.
-2. Provide an in-depth feature description.
-3. The _Planner_ will guide you through an interactive process to define the blueprint for your feature (_what_ you're building, for _whom_, and _why_) — `prd.md` in a new `docs/specs/{feature-name}/` directory.
+1. Switch to the **Planner** persona in your AI tool.
+2. Provide a detailed feature description (core functionality requirements, expected user interactions, any technical constraints or dependencies, etc.).
+3. The Planner will guide you through an interactive process to create a feature blueprint — `prd.md` in a new `docs/specs/{feature-name}/` directory.
 4. Review and approve to complete the plan.
-
-### Executor persona usage
-
-1. Switch to _Executor_ persona in your chosen AI tool.
-2. The _Executor_ will read relevant documentation to understand the system context before executing a feature.
-3. The _Executor_ will automatically pick up the plan created by the _Planner_ mode and implement it.
+5. Switch to the **Executor** persona.
+6. The Executor will read relevant system documentation for context.
+7. The Executor will automatically pick up the approved plan and implement it.
 
 ## Other Approaches
 
