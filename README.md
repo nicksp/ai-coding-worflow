@@ -21,7 +21,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **1. Planner mode**
 
-- **Mode Name:** "Planner"
+- **Name:** "Planner"
 - **Model:** Gemini 2.5 Pro or Claude Opus 4 (powerful models for complex planning)
 - **Prompt:** Copy the entire content from `prompts/planner.md`
 - **Context:** Enable "Full folder context"
@@ -30,7 +30,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **2. Executor mode**
 
-- **Mode Name:** "Executor"
+- **Name:** "Executor"
 - **Model:** Claude Sonnet 4 or Gemini 2.5 Flash (fast, capable models)
 - **Prompt:** Copy the entire content from `prompts/executor.md`
 - **Context:** Enable "Full folder context"
@@ -41,7 +41,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **1. Planner mode**
 
-- **Name:** "Planner 💬"
+- **Name:** "Planner"
 - **API Configuration:** Gemini 2.5 Pro or Claude Opus 4 (powerful models for complex planning)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/planner.md`
@@ -50,7 +50,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 - **Available Tools:** Enable "Read Files", "Edit Files (Markdown files only)", "Use Browser"
   - Use this mode's `group` configuration to limit to markdown files only:
 
-    ```
+    ```yaml
     groups:
       - read
       - - edit
@@ -63,7 +63,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **2. Executor mode**
 
-- **Name:** "Executor 🔨"
+- **Name:** "Executor"
 - **API Configuration:** Claude Sonnet 4 or Gemini 2.5 Fast (fast, capable models)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/executor.md`
