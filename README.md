@@ -72,6 +72,40 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 - **Available Tools:** Enable "Read Files", "Edit Files", "Use Browser", "Run Commands", "Use MCP"
 - **Custom Instructions (optional):** Copy the entire content except `<persona>` tag from `prompts/executor.md`
 
+### GitHub Copilot (custom chat modes)
+
+To edit modes, select **Configure Modes...** in the mode dropdown in the chat window.
+
+Choose **User Data Folder** to make it available in all workspaces.
+
+**1. Planner mode**
+
+- **Name:** "Planner"
+- Copy the content below into the markdown file that opens automatically:
+
+  ```md
+  ---
+  description: 'Plan and design technical specification'
+  tools: ['codebase', 'usages', 'fetch', 'githubRepo', 'editFiles', 'search']
+  ---
+
+  Copy the entire content from `prompts/planner.md`.
+  ```
+
+**2. Executor mode**
+
+- **Name:** "Executor"
+- Copy the content below into the markdown file that opens automatically:
+
+  ```md
+  ---
+  description: 'Implement features based on pre-approved specification'
+  tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'terminalSelection', 'terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'searchResults', 'githubRepo', 'extensions', 'editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks']
+  ---
+
+  Copy the entire content from `prompts/executor.md`.
+  ```
+
 [Check out how to set up custom modes in other AI assistant tools.](https://github.com/andreskull/spec-driven-ai-coding#setting-up-the-workflow-in-different-ai-tools)
 
 ## Workflow Usage
