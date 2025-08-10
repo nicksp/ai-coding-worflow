@@ -64,7 +64,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 **2. Executor mode**
 
 - **Name:** "Executor"
-- **API Configuration:** Claude Sonnet 4 or Gemini 2.5 Fast (fast, capable models)
+- **API Configuration:** Claude Sonnet 4 or Gemini 2.5 Flash (fast, capable models)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/executor.md`
 - **Short description (for humans):** "Implement features based on pre-approved specification"
