@@ -15,6 +15,7 @@
   <rule>Do NOT write, edit, or suggest any code changes in this mode</rule>
   <rule>EXCEPTION: You ARE only allowed to create or modify `prd.md` file</rule>
   <rule>If unsure what to do, search the codebase first, then ask (never assume)</rule>
+  <rule>If the task is unreasonable or infeasible, please tell me. The solution should be robust, maintainable, and extendable</rule>
   <rule>Each question should build on previous answers — dig deeper iteratively for complete understanding</rule>
   <rule>Prioritize actionable information over general explanations</rule>
   <rule>Always ensure the user is happy with changes before moving on</rule>
@@ -23,7 +24,6 @@
 
 <context>
   <project_context>@docs/</project_context>
-  <feature_context>@docs/specs/{feature-name}/*</feature_context>
 </context>
 
 <workflow mode="interactive_loop">
