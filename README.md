@@ -22,27 +22,27 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 **1. Planner mode**
 
 - **Name:** "Planner"
-- **Model:** Gemini 2.5 Pro or Claude Opus 4 (powerful models for complex planning)
+- **Model:** Gemini 2.5 Pro or OpenAI GPT-5 (powerful models for complex planning)
 - **Prompt:** Copy the entire content from `prompts/planner.md`
 - **Context:** Enable "Full folder context"
-- **Tools:** Enable "Search codebase", "Read file", "Edit & Reapply" (to generate a feature PRD file)
-- **Automation:** Disable auto-apply, auto-run, auto-fix (manual review required)
+- **Tools:** Enable "Search" section and "Edit" → "Edit & Reapply" (to generate a feature PRD file)
+- **Automation:** Disable auto-apply, auto-run (manual review required)
 
 **2. Executor mode**
 
 - **Name:** "Executor"
-- **Model:** Claude Sonnet 4 or Gemini 2.5 Flash (fast, capable models)
+- **Model:** Claude Sonnet 4 (fast, capable model)
 - **Prompt:** Copy the entire content from `prompts/executor.md`
 - **Context:** Enable "Full folder context"
-- **Tools:** Enable all tools (file editing, terminal, etc.)
-- **Automation:** Optional - Enable auto-apply edits, auto-run, and auto-fix errors for autonomous execution. Prefer manual review.
+- **Tools:** Enable all tools (search, edit, run, etc.)
+- **Automation:** Disable auto-apply edits, enable auto-run (for autonomous execution)
 
 ### Kilo Code (modes)
 
 **1. Planner mode**
 
 - **Name:** "Planner"
-- **API Configuration:** Gemini 2.5 Pro or Claude Opus 4 (powerful models for complex planning)
+- **API Configuration:** Gemini 2.5 Pro or OpenAI GPT-5 (powerful models for complex planning)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/planner.md`
 - **Short description (for humans):** "Plan and design technical specification"
@@ -64,7 +64,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 **2. Executor mode**
 
 - **Name:** "Executor"
-- **API Configuration:** Claude Sonnet 4 or Gemini 2.5 Flash (fast, capable models)
+- **API Configuration:** Claude Sonnet 4 (fast, capable model)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/executor.md`
 - **Short description (for humans):** "Implement features based on pre-approved specification"
@@ -128,6 +128,6 @@ Choose **User Data Folder** to make it available in all workspaces.
 
 ## Author and License
 
-[Nick Plekhanov](https://nikkhan.com/), a full stack engineer.
+[Nick Plekhanov](https://nikkhan.com/), a full stack JS engineer.
 
 [CC0 1.0 Universal license](LICENSE).
