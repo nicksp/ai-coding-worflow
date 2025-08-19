@@ -128,6 +128,6 @@ Choose **User Data Folder** to make it available in all workspaces.
 
 ## Author and License
 
-[Nick Plekhanov](https://nikkhan.com/), a full stack JS engineer.
+[Nick Plekhanov](https://plekhanov.me/), a fullstack JS engineer.
 
 [CC0 1.0 Universal license](LICENSE).
