@@ -72,6 +72,38 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 - **Available Tools:** Enable "Read Files", "Edit Files", "Use Browser", "Run Commands", "Use MCP"
 - **Custom Instructions (optional):** Copy the entire content except `<persona>` tag from `prompts/executor.md`
 
+### Amp (modes via prompting)
+
+Amp doesn't have mode selection by design. We can work around this "limitation" via prompt engineering by using the [AGENTS.md](https://ampcode.com/manual#AGENTS.md) file and defining our custom modes in there.
+
+Create `AGENTS.md` file at a user level (`$HOME/.config/AGENTS.md`) or at the workspace root level with the following content:
+
+```md
+/Planner
+[the entire content from `prompts/planner.md`]
+
+/Executor
+[the entire content from `prompts/executor.md`]
+```
+
+Now, when you prompt Amp, just switch any particular mode on by calling either:
+
+```
+/Planner
+YOUR PROMPT HERE
+```
+
+or
+
+```
+/Executor
+YOUR PROMPT HERE
+```
+
+Once "turned on", Amp will remain in the same mode throughout the session, so you don't need to repeat the enabling command with every prompt.
+
+Starting a new thread resets the mode to "normal", or you can reset it manually by telling Amp you want to go into "normal" mode.
+
 ### GitHub Copilot (custom chat modes)
 
 To edit modes, select **Configure Modes...** in the mode dropdown in the chat window.
