@@ -158,6 +158,12 @@ Choose **User Data Folder** to make it available in all workspaces.
 - [Agent OS](https://github.com/buildermethods/agent-os)
 - [Prompts for plan & execute workflow in Cursor](https://github.com/carlrannaberg/ai-coding)
 
+## Sponsoring
+
+Software engineering runs on determination and energy — help me keep the engine running!
+
+<a href="https://buymeacoffee.com/plekhanov" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-yellow.png" alt="Buy Me A Coffee" height="51" width="217"></a>
+
 ## Author and License
 
 [Nick Plekhanov](https://plekhanov.me/), a fullstack JS engineer.
