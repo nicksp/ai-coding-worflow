@@ -152,6 +152,7 @@ Choose **User Data Folder** to make it available in all workspaces.
 
 ## Other Approaches
 
+- [GitHub Spec Kit](https://github.com/github/spec-kit)
 - [Kiro-style Prompts for Spec-Driven Development](https://github.com/andreskull/spec-driven-ai-coding)
 - [Two-step approach to AI coding](https://github.com/sapegin/two-step-ai-coding-modes)
 - [🚀 AI Dev Tasks 🤖](https://github.com/snarktank/ai-dev-tasks)
