@@ -21,7 +21,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **1. Planner mode**
 
-- **Name:** "Planner"
+- **Name:** "☂ Planner"
 - **Model:** Gemini 2.5 Pro or OpenAI GPT-5 (powerful models for complex planning)
 - **Prompt:** Copy the entire content from `prompts/planner.md`
 - **Context:** Enable "Full folder context"
@@ -30,7 +30,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **2. Executor mode**
 
-- **Name:** "Executor"
+- **Name:** "✈ Executor"
 - **Model:** Claude Sonnet 4 (fast, capable model)
 - **Prompt:** Copy the entire content from `prompts/executor.md`
 - **Context:** Enable "Full folder context"
@@ -41,7 +41,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **1. Planner mode**
 
-- **Name:** "Planner"
+- **Name:** "☂ Planner"
 - **API Configuration:** Gemini 2.5 Pro or OpenAI GPT-5 (powerful models for complex planning)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/planner.md`
@@ -63,7 +63,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 **2. Executor mode**
 
-- **Name:** "Executor"
+- **Name:** "✈ Executor"
 - **API Configuration:** Claude Sonnet 4 (fast, capable model)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/executor.md`
@@ -112,7 +112,7 @@ Choose **User Data Folder** to make it available in all workspaces.
 
 **1. Planner mode**
 
-- **Name:** "Planner"
+- **Name:** "☂ Planner"
 - Copy the content below into the markdown file that opens automatically:
 
   ```md
@@ -126,7 +126,7 @@ Choose **User Data Folder** to make it available in all workspaces.
 
 **2. Executor mode**
 
-- **Name:** "Executor"
+- **Name:** "✈ Executor"
 - Copy the content below into the markdown file that opens automatically:
 
   ```md
