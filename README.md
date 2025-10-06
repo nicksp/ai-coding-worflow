@@ -1,4 +1,4 @@
-# Custom Prompts for AI Coding Agents
+# Spec-driven AI Coding Workflow
 
 This project provides a set of prompts for AI coding agents to implement a structured, two-step Plan & Execute workflow, inspired by the principles of [Kiro](https://kiro.dev/docs/specs/concepts/).
 
@@ -23,6 +23,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 
 - **Name:** "☂ Planner"
 - **Model:** Gemini 2.5 Pro or OpenAI GPT-5 (powerful models for complex planning)
+- **Keybinding:** Cmd+Shift+1
 - **Prompt:** Copy the entire content from `prompts/planner.md`
 - **Context:** Enable "Full folder context"
 - **Tools:** Enable "Search" section and "Edit" → "Edit & Reapply" (to generate a feature PRD file)
@@ -31,7 +32,8 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 **2. Executor mode**
 
 - **Name:** "✈ Executor"
-- **Model:** Claude Sonnet 4 (fast, capable model)
+- **Model:** Claude Sonnet 4.5 (fast, capable model)
+- **Keybinding:** Cmd+Shift+2
 - **Prompt:** Copy the entire content from `prompts/executor.md`
 - **Context:** Enable "Full folder context"
 - **Tools:** Enable all tools (search, edit, run, etc.)
@@ -64,7 +66,7 @@ This workflow uses two distinct AI personas, each with a specific role. The setu
 **2. Executor mode**
 
 - **Name:** "✈ Executor"
-- **API Configuration:** Claude Sonnet 4 (fast, capable model)
+- **API Configuration:** Claude Sonnet 4.5 (fast, capable model)
 - **Save Location:** "Global" (available in all workspaces)
 - **Role Definition:** Copy `<persona>` tag content from `prompts/executor.md`
 - **Short description (for humans):** "Implement features based on pre-approved specification"
@@ -119,6 +121,7 @@ Choose **User Data Folder** to make it available in all workspaces.
   ---
   description: 'Plan and design technical specification'
   tools: ['codebase', 'usages', 'fetch', 'githubRepo', 'editFiles', 'search']
+  model: Gemini 2.5 Pro (copilot)
   ---
 
   Copy the entire content from `prompts/planner.md`.
@@ -133,6 +136,7 @@ Choose **User Data Folder** to make it available in all workspaces.
   ---
   description: 'Implement features based on pre-approved specification'
   tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'terminalSelection', 'terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'searchResults', 'githubRepo', 'extensions', 'editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks']
+  model: Claude Sonnet 4.5 (Preview) (copilot)
   ---
 
   Copy the entire content from `prompts/executor.md`.
